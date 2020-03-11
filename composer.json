@@ -1,0 +1,24 @@
+{
+    "name": "undeadline/composer-skeleton",
+    "description": "This is the skeleton package for development of libraries.",
+    "keywords": ["template", "composer", "package", "library", "starter"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Evgeny Mishanin",
+            "email": "ermak321@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=7.1"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "your\\namespace\\": "src/"
+        }
+    }
+}
