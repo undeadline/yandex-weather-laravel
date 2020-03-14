@@ -1,4 +1,2 @@
-Composer Library Template
+Yandex weather for Laravel
 =========================
-
-This is the skeleton package for development of libraries

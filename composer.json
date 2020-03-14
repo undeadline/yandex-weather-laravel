@@ -1,7 +1,7 @@
 {
-    "name": "undeadline/composer-skeleton",
-    "description": "This is the skeleton package for development of libraries.",
-    "keywords": ["template", "composer", "package", "library", "starter"],
+    "name": "undeadline/yandex-weather-laravel",
+    "description": "Package for Laravel what use yandex weather api.",
+    "keywords": ["yandex", "weather", "laravel"],
     "license": "MIT",
     "authors": [
         {
@@ -9,16 +9,35 @@
             "email": "ermak321@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "type": "library",
     "require": {
-		"php": ">=7.1"
+		"php": ">=7.2",
+        "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
-		"phpunit/phpunit": "6.*"
+		"phpunit/phpunit": "9.*",
+        "orchestra/testbench": "^5.1"
     },
     "autoload": {
         "psr-4": {
-            "your\\namespace\\": "src/"
+            "Undeadline\\YW\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Undeadline\\YW\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Undeadline\\YW\\YandexWeatherServiceProvider"
+            ],
+            "aliases": {
+                "YW": "Undeadline\\YW\\YandexWeatherFacade"
+            }
         }
     }
 }
