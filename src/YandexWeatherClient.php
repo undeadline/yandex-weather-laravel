@@ -22,7 +22,7 @@ class YandexWeatherClient
     {
         $this->client = new Client([
             "base_uri" => app()->has('config')
-                ? config('yandex-weather.api_key')
+                ? config('yandex-weather.base_url')
                 : "https://api.weather.yandex.ru/",
             "headers" => app()->has('config')
                 ? ["X-Yandex-API-Key" => config('yandex-weather.api_key')]
