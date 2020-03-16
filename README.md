@@ -17,3 +17,12 @@ echo $weather->temperature(); // current temperature
 echo $weather->feelsTemperature(); // current feels temperature
 echo $weather->icon(); // url for temperature icon
 ```
+
+## Installing guide
+
+The recommended way to install YW is through
+[Composer](https://getcomposer.org/).
+
+```bash
+composer require undeadline/yandex-weather-laravel
+```
