@@ -97,6 +97,14 @@ class YandexWeather
         return $this->content;
     }
 
+    public function __get($name)
+    {
+        if (property_exists($this->content(), $name))
+            return $this->content->{$name};
+
+        return null;
+    }
+
     /**
      * Execute for get weather
      *
