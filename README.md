@@ -2,7 +2,16 @@ Yandex weather for Laravel
 =========================
 
 ```php
-$weather = new \Undeadline\YW\YandexWeather(13.823, 72.752, ['lang' => 'ru_RU], 'limit' => 1, 'hours' => true, 'extra' => true);
+$latitude = 15.8921;
+$longitude = 82.78821;
+$params = [
+    'lang' => 'ru_RU', // response language 
+    'limit' => 1, // forecast period
+    'hours' => true, // response is contains horly period
+    'extra' => true // detailed precipitation forecast
+];
+
+$weather = new \Undeadline\YW\YandexWeather($latitude, $longitude, $params);
 
 echo $weather->temperature(); // current temperature
 echo $weather->feelsTemperature(); // current feels temperature
