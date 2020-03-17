@@ -1,6 +1,20 @@
 Yandex weather for Laravel
 =========================
 
+## Installing guide
+
+The recommended way to install YW is through
+[Composer](https://getcomposer.org/).
+
+```bash
+composer require undeadline/yandex-weather-laravel
+```
+
+After composer require you need use this command
+```bash
+php artisan vendor:publish --tag=config
+```
+
 ```php
 $latitude = 15.8921;
 $longitude = 82.78821;
@@ -16,13 +30,4 @@ $weather = new \Undeadline\YW\YandexWeather($latitude, $longitude, $params);
 echo $weather->temperature(); // current temperature
 echo $weather->feelsTemperature(); // current feels temperature
 echo $weather->icon(); // url for temperature icon
-```
-
-## Installing guide
-
-The recommended way to install YW is through
-[Composer](https://getcomposer.org/).
-
-```bash
-composer require undeadline/yandex-weather-laravel
 ```
